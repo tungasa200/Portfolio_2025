@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     progressBar()
 })
 
-// window.addEventListener("load", () => {
-//     history.scrollRestoration = 'manual';
-//     window.scrollTo(0, 0);
-// });
+window.addEventListener("load", () => {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+});
 
 function visualEffect() {
     const wrap = document.querySelector('.change-word_wrap');
@@ -40,7 +40,7 @@ function visualEffect() {
             for(let i = 0; i < cw[currentIndex -1].children.length ; i++ ){
                 word[i].style.color='#FF6347';
             }
-            // setTimeout(()=>{document.querySelector('#content01').scrollIntoView({ behavior: 'smooth' });},500);
+            setTimeout(()=>{document.querySelector('#content01').scrollIntoView({ behavior: 'smooth' });},500);
         }
         setWrapWidth();
 
