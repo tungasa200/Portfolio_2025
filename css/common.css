@@ -1,0 +1,53 @@
+@import "https://cdn.jsdelivr.net/gh/KunalTanwar/normalize/css/normalize.inter.min.css";
+
+
+:root{
+  --primary:#FF6347;
+}
+body,html {background-color:#eee;}
+.sec {width: 100%; height: 100vh; overflow: hidden;}
+.inner { display: block; position: relative; width: 100%; max-width: 1600px; margin: 0 auto; }
+#visual { display: block; position: relative;  overflow: hidden; }
+#visual .visual_wrap {display: flex; flex-direction: column; gap: 2rem; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;}
+#visual .visual_list { display: flex; gap: 2rem; align-items: center; justify-content: center; }
+#visual .visual_list p ,
+#visual .visual_list p * { font-size:5.5rem ; font-weight: 500; line-height: 1;}
+#visual .visual_list li:nth-child(2) { display: flex; align-items: center;}
+#visual .change-word_wrap { display: flex; position: relative;  flex-direction: column; transition: .3s; transition-timing-function: ease-in ; overflow: hidden; white-space: nowrap; align-items: center; height: 5rem; }
+#visual .change-word { display: inline-flex; position: absolute; top: 50%; left: 50%;  width: fit-content; transform: translate(-50%,50%);  transition: .2s; transition-timing-function: ease-in; }
+#visual .change-word span { display: inline-block; transition: .2s; font-family: "optique-display", sans-serif; font-style: italic;}
+#visual .change-word span.active { animation: visual-text .2s ease-in forwards; }
+#visual .visual-txt { font-size: 1.2rem;  color: #555; }
+
+/* #content01 .ani_dark { display: block; position: absolute; top: 0; left: 0;  width: 100%; height: 100%; background:linear-gradient(to right, rgba(0,0,0,0)0%, rgba(0,0,0,1) 5% ); z-index: 30; transition: 1s; transition-delay: .2s; transition-timing-function: ease-in-out;} */
+/* #content01 .ani_dark.active { transform: translateX(100%); } */
+#content01 { position: relative; background: linear-gradient(to right, #000 15%, #fff 15%, #fff 40%, #eee 60%);}
+#content01::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 40%; height: 125px;   background-color: #000; z-index: 10; }
+#content01::after { content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 40%; height: 125px; background-color: #000; z-index: 10;}
+#content01 .light:nth-child(1){display: block; position: absolute; top: 0px; left: -10%;; width: 50%; height: 250px; background: conic-gradient(#333 0%, #fff 20%, #fff 50%, #000 50%,#000 70%, #333 100%);; z-index: 20;}
+#content01 .light:nth-child(2){display: block; position: absolute; bottom: 0px; left: -10%;; width: 50%; height: 250px; background: conic-gradient(#fff 30%, #333 50%, #000 70%);; z-index: 20;}
+
+#content01 .inner{ padding-left: 10% ;  height: 100%; z-index: 100;}
+#content01 .wrap { display: flex; justify-content: space-between; width: 100%; height: 100%; padding: 125px 0; }
+
+#content01 .txt-box { display: flex; flex-direction: column; justify-content: space-around; height: 100%; padding:0 3rem;}
+#content01 .txt-box h1 {position: relative;  background: linear-gradient(to right, rgba(255,255,255,0.05) 0%, rgba(0,0,0,1) 10%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem; font-weight: 600;}
+#content01 .txt-box p {position: relative;  background: linear-gradient(to right, rgba(255,255,255,0.01) 0%, rgba(0,0,0,1) 2%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.2rem;}
+
+/* .darken-area { width: 100%; height: 300vh; background: linear-gradient(to bottom, #eee 0%, #000 100%); } */
+
+#content01 .profile {display: flex; flex-direction: column; gap: 2rem;}
+#content01 .profile h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+#content01 .progress { display: flex; gap: 1rem; }
+#content01 .progress p {text-align: center; margin-top: .5rem;}
+#content01 .circle { position: relative; width: 80px; height: 80px; margin: 0 auto; filter: grayscale(1); transition: .2s;}
+#content01 .circle .per { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+
+@media (hover:hover) and (pointer:fine){
+  #content01 .progress li:hover .circle {filter: grayscale(0);}
+}
+
+@keyframes visual-text {
+  to { transform: translateY(-100%); }
+}
