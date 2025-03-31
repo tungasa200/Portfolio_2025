@@ -14,7 +14,6 @@
     <script src="./js/fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/scroll-horizontally.min.js"></script>
 
     <script>
         (function(d) {
@@ -32,8 +31,6 @@
 <body>
     <main id="main" class="main">
         <section id="visual" class="sec">    
-            <!-- <div class="glassy-overlay"></div> -->
-            <canvas></canvas>
             <div class="visual_wrap">
                 <ul class="visual_list">
                     <li>
@@ -75,9 +72,8 @@
                 <p class="visual-txt">Full Stack Web Developer Kim Seong-woo Portfolio : Java, Spring, React</p> 
             </div>  
         </section>
-        <!-- <div class="darken-area section"></div> -->
         <div id="fullpage">
-            <div class="section">
+            <div id="sec01" class="section">
                 <div class="swiper-container fullpage-swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
@@ -95,7 +91,7 @@
                                             </div>
                                             <div>
                                                 <span><img src="./images/spin.svg" alt=""></span>
-                                                <h1>김성우 입니다.</h1>
+                                                <h1>김성우 입니다</h1>
                                             </div>
                                         </div>
                                         <div>
@@ -106,7 +102,7 @@
                                             <br>
                                             <p>
                                                 새로운 도전을 앞둔 저에게 앞으로 얼마나 많은 벽이 가로막고 있을지는 알 수 없으나, <br>
-                                                포기를 모르는 열정으로 끝까지 최선을 다하여 결국엔 돌파구를 찾아내겠습니다.
+                                                포기를 모르는 열정으로 끝까지 최선을 다하여 결국엔 돌파구를 찾아내겠습니다
                                             </p>
                                         </div>
                                     </div>
@@ -114,24 +110,141 @@
                             </article>
                         </li>
                         <li class="swiper-slide">
-                            <article class="sec"></article>
+                            <article id="content02" class="sec">
+                                <div class="inner">
+                                    <div class="title">
+                                        <h1>Profile</h1>
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="pic">
+                                            <img src="./images/profile.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <ul class="info_list">
+                                                <li>
+                                                    <h2>Infomation</h2>
+                                                    <p>
+                                                        김성우 - 1996.07.07(만 28세)
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <h2>Education</h2>
+                                                    <ul>
+                                                        <li><p>자바와 스프링을 활용한 하이브리드 웹앱 풀스택 개발자 양성과정 <span>- 2024.10 ~ 2025.04</span></p></li>
+                                                        <li><p>기간 전략산업 직종훈련  [NCS] 디지털 디자인 웹퍼블리셔 양성과정  <span>- 2021.06 ~ 2021.12</span></p></li>
+                                                        <li><p>건국대학교 글로컬캠퍼스 산업디자인학부 <span>- 2015.03 ~ 2019.02</span></p></li>                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h2>Career</h2>
+                                                    <p>
+                                                        웹 퍼블리셔 - 주식회사 이팝 / 웹개발팀 <span>- 2022.02 ~ 2024.08</span>
+                                                    </p>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
                         </li>
                         <li class="swiper-slide">
-                            <article class="sec"></article>
+                            <article id="content03" class="sec">
+                                <div class="inner">
+                                    <div class="title">
+                                        <h1>Skills</h1>
+                                    </div>
+                                    <div class="content-wrap">
+                                        <ul class="skill_list">
+                                            <li>
+                                                <div class="item">
+                                                    <h2>
+                                                        FrontkEnd
+                                                    </h2>
+                                                    <ul>
+                                                        <li>
+                                                            <p>HTML5</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>CSS3</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>JavaScript</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>React</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Axios</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <h2>
+                                                        BackEnd
+                                                    </h2>
+                                                    <ul>
+                                                        <li>
+                                                            <p>Java</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Spring Boot</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>JPA</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>MyBatis</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>MySQL</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <h2>
+                                                        Tools
+                                                    </h2>
+                                                    <ul>
+                                                        <li>
+                                                            <p>Figma</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>PhotoShop</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Illustration</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
                         </li>
                     </ul>  
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <section class="section sec">
-                1
+            <section id="sec02" class="section sec  fp-auto-height">
+                <div class="inner">
+                  
+                    
+                </div>
             </section>
-            <section class="section sec">
-                2
+            <section id="sec03" class="section sec">
+                <div class="inner">
+                    
+                </div>
             </section>
-            <section class="section sec">
-                3
-            </section>
+            <footer id ="footer" class="section fp-auto-height">
+                  footer
+            </footer>
         </div>
     </main>
 </body>

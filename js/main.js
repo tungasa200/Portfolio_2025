@@ -1,17 +1,17 @@
 window.addEventListener("load", () => {
     history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
-    const intro = '#intro';
+    const intro = '#visual';
     if (window.location.hash  !== intro) {
-        history.replaceState(null, null, window.location.pathname + window.location.search + intro);
+        history.replaceState(null, null, window.location.pathname + window.location.search);
       }
 });
 
 document.addEventListener("DOMContentLoaded",()=>{
+    setTimeout(fullpageEffect,4000)
     window.addEventListener("load",
-        visualEffect()
+        setTimeout(visualEffect,500)
     );
-    fullpageEffect();
 })
 
 function swiperEffect(){
@@ -116,8 +116,8 @@ function fullpageEffect() {
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
-        anchors: ['intro', 'page01', 'page02', 'page03'],
-        showActiveTooltip: true,
+        // anchors: ['sec01', 'sec02', 'sec03'],
+        // showActiveTooltip: true,
         slidesNavigation: true,
         controlArrows: false,
         onLeave: function (origin, destination, direction) {
