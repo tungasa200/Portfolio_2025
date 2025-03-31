@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
     <script src="./js/animation.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/scroll-horizontally.min.js"></script>
 
     <script>
         (function(d) {
@@ -29,6 +32,8 @@
 <body>
     <main id="main" class="main">
         <section id="visual" class="sec">    
+            <!-- <div class="glassy-overlay"></div> -->
+            <canvas></canvas>
             <div class="visual_wrap">
                 <ul class="visual_list">
                     <li>
@@ -37,7 +42,7 @@
                     <li>
                         <p>&#123;</p>
                         <div class="change-word_wrap">
-                            <p class="change-word active">
+                            <p class="change-word">
                                 <span>디</span>
                                 <span>자</span>
                                 <span>이</span>
@@ -70,150 +75,64 @@
                 <p class="visual-txt">Full Stack Web Developer Kim Seong-woo Portfolio : Java, Spring, React</p> 
             </div>  
         </section>
-        <div class="darken-area"></div>
-        <section id="content01" class="sec">
-            <div class="light"></div>
-            <div class="light"></div>
-            <div class="ani_dark"></div>
-            <div class="inner">
-                <div class="wrap">
-                    <div class="txt-box">
-                        <h1>돌파구를 찾아내는 웹 개발자 <br> 김성우 입니다.</h1>
-                        <div>
-                            <p>
-                                돌파구라는 것은 우연히 발견하는 것이 아니라, <br>
-                                끊임없는 노력과 포기를 모르는 자세를 통해 발견할 수 있다고 생각합니다. 
-                            </p>
-                            <br>
-                            <p>
-                                새로운 도전을 앞둔 저에게 앞으로 얼마나 많은 벽이 가로막고 있을지는 알 수 없으나, <br>
-                                포기를 모르는 열정으로 끝까지 최선을 다하여 결국엔 돌파구를 찾아내겠습니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="profile">
-                        <div class="item">
-                            <h3>
-                                Profile
-                            </h3>
-                        </div>
-                        <div class="item">
-                            <h3>
-                                Education
-                            </h3>
-                        </div>
-                        <div class="item">
-                            <h3>
-                                Career
-                            </h3>
-                        </div>
-                        <div class="item">
-                            <h3>
-                                Languages
-                            </h3>
-                            <ul class="progress">
-                                <li>
-                                    <div class="circle cir01">
-                                        <strong class="per"></strong>
+        <!-- <div class="darken-area section"></div> -->
+        <div id="fullpage">
+            <div class="section">
+                <div class="swiper-container fullpage-swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <article id="content01" class="sec">                
+                                <div class="light"></div>
+                                <div class="light"></div>
+                                <div class="dark "></div>            
+                                <div class="inner">
+                                    <div class="wrap">
+                                        <div class="title-box">
+                                            <div>
+                                                <h1>돌파구를 찾아내는</h1>
+                                                <div class="bar"></div>
+                                                <strong>웹 개발자</strong>
+                                            </div>
+                                            <div>
+                                                <span><img src="./images/spin.svg" alt=""></span>
+                                                <h1>김성우 입니다.</h1>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                돌파구라는 것은 우연히 발견하는 것이 아니라, <br>
+                                                끊임없는 노력과 포기를 모르는 자세를 통해 발견할 수 있다고 생각합니다. 
+                                            </p>
+                                            <br>
+                                            <p>
+                                                새로운 도전을 앞둔 저에게 앞으로 얼마나 많은 벽이 가로막고 있을지는 알 수 없으나, <br>
+                                                포기를 모르는 열정으로 끝까지 최선을 다하여 결국엔 돌파구를 찾아내겠습니다.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <p>Java</p>
-                                </li>
-                                <li>
-                                    <div class="circle cir02">
-                                        <strong class="per"></strong>
-                                    </div>
-                                    <p>SQL</p>
-                                </li>
-                                <li>
-                                    <div class="circle cir03">
-                                        <strong class="per"></strong>
-                                    </div>
-                                    <p>React</p>
-                                </li>
-                                <li>
-                                    <div class="circle cir04">
-                                        <strong class="per"></strong>
-                                    </div>
-                                    <p>JS</p>
-                                </li>
-                                <li>
-                                    <div class="circle cir05">
-                                        <strong class="per"></strong>
-                                    </div>
-                                    <p>HTML5</p>
-                                </li>
-                                <li>
-                                    <div class="circle cir06">
-                                        <strong class="per"></strong>
-                                    </div>
-                                    <p>CSS3</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <h3>
-                                Skills & Tools
-                            </h3>
-                            <ul class="skill">
-                                <li>
-                                    <img src="images/icon_Spring.svg" alt="">
-                                    <p>Spring Boot</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_Jpa.svg" alt="">
-                                    <p>JPA</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_mybatis.svg" alt="">
-                                    <p>MyBatis</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_ThymeleafIcon.svg" alt="">
-                                    <p>ThymeLeaf</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_Git.svg" alt="">
-                                    <p>Git Bash</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_intellij.svg" alt="">
-                                    <p>Intellij</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_eclipse.svg" alt="">
-                                    <p>Eclipse</p>
-                                </li>
-                                <li>
-                                    <img src="images/Icon_vsc.svg" alt="">
-                                    <p>VSCode</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_mysql.svg" alt="">
-                                    <p>MySQL</p>
-                                </li>
-                                <li>
-                                    <img src="images/Icon_github.svg" alt="">
-                                    <p>GitHub</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_Figma.svg" alt="">
-                                    <p>Figma</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_Photoshop.svg" alt="">
-                                    <p>PS</p>
-                                </li>
-                                <li>
-                                    <img src="images/icon_Illustrator.svg" alt="">
-                                    <p>AI</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="swiper-slide">
+                            <article class="sec"></article>
+                        </li>
+                        <li class="swiper-slide">
+                            <article class="sec"></article>
+                        </li>
+                    </ul>  
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </section>
+            <section class="section sec">
+                1
+            </section>
+            <section class="section sec">
+                2
+            </section>
+            <section class="section sec">
+                3
+            </section>
+        </div>
     </main>
 </body>
 </html>
