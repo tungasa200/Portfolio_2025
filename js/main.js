@@ -1,17 +1,18 @@
-window.addEventListener("load", () => {
-    history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
-    const intro = '#visual';
-    if (window.location.hash  !== intro) {
-        history.replaceState(null, null, window.location.pathname + window.location.search);
-      }
-});
+// window.addEventListener("load", () => {
+//     history.scrollRestoration = 'manual';
+//     window.scrollTo(0, 0);
+//     const intro = '#visual';
+//     if (window.location.hash  !== intro) {
+//         history.replaceState(null, null, window.location.pathname + window.location.search);
+//       }
+// });
 
 document.addEventListener("DOMContentLoaded",()=>{
-    setTimeout(fullpageEffect,4000)
-    window.addEventListener("load",
-        setTimeout(visualEffect,500)
-    );
+    fullpageEffect();
+    // setTimeout(fullpageEffect,4000)
+    // window.addEventListener("load",
+    //     setTimeout(visualEffect,500)
+    // );
 })
 
 function swiperEffect(){
