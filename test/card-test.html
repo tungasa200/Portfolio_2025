@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Cube Card Fixed</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .scene {
+      perspective: 2000px;
+    
+    }
+
+    .cube {
+      position: relative;
+      width: 1000px;
+      height: 600px;
+      transform-style: preserve-3d;
+      animation: flip 1s linear forwards;
+    }
+
+    .face {
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      font-family: sans-serif;
+      background: white;
+      box-sizing: border-box;
+    }
+
+    .front  { transform: translateZ(2px); }
+    .back   { transform: rotateY(180deg) translateZ(2px); background: #eee; }
+
+    .top, .bottom,
+    .left, .right {
+      position: absolute;
+      background: #ccc;
+    }
+
+    .top, .bottom {
+      width: 1000px;
+      height: 4px;
+      left: 0;
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(2px);
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(598px);
+    }
+
+    .left, .right {
+      width: 4px;
+      height: 600px;
+      top: 0;
+    }
+
+    .left {
+      transform: rotateY(90deg) translateZ(998px);
+    }
+
+    .right {
+      transform: rotateY(-90deg) translateZ(2px);
+    }
+
+    @keyframes flip {
+      0%   { transform: rotate3d(0,0,0,0deg); }
+      50%  { transform: rotate3d(1,1,1,90deg); }
+      100% { transform: rotate3d(0,1,0,180deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="cube">
+      <div class="face front">connect</div>
+      <div class="face back">email</div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+    </div>
+  </div>
+</body>
+</html>
