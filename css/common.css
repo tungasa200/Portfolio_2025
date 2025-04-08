@@ -126,7 +126,7 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 /* .card.active  {animation: flip 3s linear forwards} */
 .face { position: absolute; width: 1000px; height: 600px; display: flex; justify-content: center; align-items: center; font-size: 4rem; font-family: sans-serif; background: #eee; box-sizing: border-box;}
 .front  { transform: translateZ(2px); }
-.back   { transform: rotateY(180deg) translateZ(2px); background: #fff; }
+.back   { transform: rotateY(180deg) translateZ(2px); background: #fff; position: relative; flex-direction: column; justify-content: space-between; align-items: center; padding: 3rem 0;}
 .top, .bottom,
 .left, .right {  position: absolute;  background: #ddd;}
 .top, .bottom { width: 1000px; height: 4px; left: 0;}
@@ -136,6 +136,8 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 .left {transform: rotateY(90deg) translateZ(997px);}
 .right {transform: rotateY(-90deg) translateZ(0px);}
 
+.card .thk {text-align: center;color: #FF6347;}
+
 .card .item-box { display: flex; gap: 3rem;}
 .card .item-box div{ display: flex; flex-direction: column; gap: 1rem;}
 .card h2 { font-size: 4rem; font-weight: bold; color: #1c1c1c; line-height: 1;}
@@ -143,11 +145,14 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 .card p b { font-weight: bold; color: #1c1c1c; }
 .card p a { color: inherit; transition: .2s;}
 
-#footer { display: flex; flex-direction: column; gap: 1rem; width: 100%; background-color: #1c1c1c; padding: 4rem 2rem;  }
+#footer { width: 100%; background-color: #1c1c1c; padding: 3rem 0;  }
+#footer .inner { display: flex; justify-content: space-between; align-items: flex-end; height: auto; padding-top: 0;}
+#footer .info { display: flex; flex-direction: column; gap: 1rem; }
+#footer h1 { color: #FF6347; }
 #footer * { color:#fff }
 #footer h1 { font-size: 1.5rem; margin-bottom: 1rem; }
 #footer p { font-size: 1.125rem; }
-#footer p:last-child { opacity: .7; }
+#footer .copyr { opacity: .7; }
 #footer a { opacity: .7; }
 
 .main .pointer_wrap {position: absolute ;z-index: 100; width: fit-content; pointer-events: none;}
