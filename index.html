@@ -14,7 +14,7 @@
     <script src="./js/fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         (function(d) {
           var config = {
@@ -29,7 +29,13 @@
     <title>김성우 포트폴리오</title>
 </head>
 <body>
-    <main id="main" class="main">
+    <main id="main" class="main">                
+        <div class="pointer_wrap">
+            <div class="pointer">
+                <span class="click-txt">Click</span>
+                <div class="img"></div>
+            </div>
+        </div>
         <section id="visual" class="sec">    
             <div class="visual_wrap">
                 <ul class="visual_list">
@@ -72,7 +78,7 @@
                 <p class="visual-txt">Full Stack Web Developer Kim Seong-woo Portfolio : Java, Spring, React</p> 
             </div>  
         </section>
-        <div id="fullpage">
+        <div id="fullpage">            
             <div id="sec01" class="section">
                 <div class="swiper-container fullpage-swiper">
                     <ul class="swiper-wrapper">
@@ -81,7 +87,7 @@
                                 <div class="light"></div>
                                 <div class="light"></div>
                                 <div class="dark "></div>            
-                                <div class="inner">
+                                <div class="inner">                                    
                                     <div class="wrap">
                                         <div class="title-box">
                                             <div>
@@ -162,19 +168,19 @@
                                                         FrontkEnd
                                                     </h2>
                                                     <ul>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>HTML5</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>CSS3</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>JavaScript</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>React</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Axios</p>
                                                         </li>
                                                     </ul>
@@ -186,19 +192,19 @@
                                                         BackEnd
                                                     </h2>
                                                     <ul>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Java</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Spring Boot</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>JPA</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>MyBatis</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>MySQL</p>
                                                         </li>
                                                     </ul>
@@ -210,19 +216,19 @@
                                                         Tools & ETC
                                                     </h2>
                                                     <ul>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Figma</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>PhotoShop</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Illustration</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Git</p>
                                                         </li>
-                                                        <li>
+                                                        <li class="hover-img">
                                                             <p>Intelli J</p>
                                                         </li>
                                                     </ul>
@@ -427,17 +433,30 @@
             <section id="sec05" class="section sec">
                 <div class="scene">
                     <div class="card">
-                      <div class="face front"><h1>connect</h1></div>
-                      <div class="face back">email</div>
-                      <div class="face top"></div>
-                      <div class="face bottom"></div>
-                      <div class="face left"></div>
-                      <div class="face right"></div>
+                        <div class="face front"><h1>CONNECT</h1></div>
+                        <div class="face back">
+                            <div class="item-box">
+                                <h2>김성우</h2>
+                                <div class="bar-h"></div>
+                                <div>
+                                    <p><b>Tell</b> <a href="tel:01092339354">010-9233-9354</a></p>
+                                    <p><b>Email</b> <a href="mailto:ksoung1402@naver.com">ksoung1402@naver.com</a></p>
+                                    <p><b>GitHub</b> <a href="https://github.com/tungasa200" target="_blank">https://github.com/tungasa200</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
                     </div>
-                  </div>
-            </section>
+                </div>
+            </section>            
             <footer id ="footer" class="section fp-auto-height">
-                footer
+                <h1>Kim Seong-woo Portfolio 2025</h1>
+                <p><b>Email</b> <a href="mailto:ksoung1402@naver.com">ksoung1402@naver.com</a></p>
+                <p><b>GitHub</b> <a href="https://github.com/tungasa200" target="_blank">https://github.com/tungasa200</a></p>
+                <p>Copyright © Kim Seong-woo. All rights reserved.</p>
             </footer>
         </div>
     </main>
