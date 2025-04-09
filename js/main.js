@@ -5,15 +5,13 @@ window.addEventListener("load", () => {
     if (window.location.hash  !== intro) {
         history.replaceState(null, null, window.location.pathname + window.location.search + intro);
     }
+    setTimeout(visualEffect,500)
 });
 
 document.addEventListener("DOMContentLoaded",()=>{
     cardFlipEffect();
     mousePointerEffect()
     setTimeout(fullpageEffect,4000)
-    window.addEventListener("load",
-        setTimeout(visualEffect,500)
-    );
 })
 
 function swiperEffect(){
