@@ -71,22 +71,26 @@ ex)
 /* txt-slide-up */
 /*보이지 않는 곳에서 텍스트가 나오는 듯한 애니메이션
   텍스트를 숨겨둘 parent를 마크업에 넣어야함*/
-.ani_txt-slide-up_wrap { overflow: hidden; }/*부모요소의 클래스*/
+.ani_default { display: block; }
+.active .ani_default { display: none; }
+.ani_txt-slide-up_wrap { overflow: hidden; display: none;}/*부모요소의 클래스*/
+.active .ani_txt-slide-up_wrap { display: block;}/*부모요소의 클래스*/
 .ani_txt-slide-up { display:block; transform: translateY(100%);}/*초기값*/
-.ani_txt-slide-up.active{ animation-name: txt-slide-up; animation-fill-mode: forwards; }
+.active .ani_txt-slide-up { animation-name: txt-slide-up; animation-fill-mode: forwards; }
+
 
 
 /* txt-fade-up */
 /*투명한 텍스트가 살짝 올라오면서 등장하는 애니메이션*/
 .ani_txt-fade-up { transform: translateY(30px); opacity:0;}/*초기값*/
-.ani_txt-fade-up.active{ animation-name: txt-fade-up; animation-fill-mode: forwards; }
+.active .ani_txt-fade-up{ animation-name: txt-fade-up; animation-fill-mode: forwards; }
 
 
 /* focus */
 /*흐릿한 요소가 초점을 맞추듯 선명해지는 애니메이션*/
 .ani_focus { filter: blur(10px); transition: 1.5s; }
 .ani_focus.active { animation-name: focus; animation-fill-mode: forwards; }
-.swiper-slide-active .ani_focus { filter: blur(0); }/*해당 스와이퍼 슬라이드가 활성화 되었을때 활성화*/
+.active .ani_focus { filter: blur(0); }
 
 
 /* fade-in */
