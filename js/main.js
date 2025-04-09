@@ -146,12 +146,11 @@ function fullpageEffect() {
 function cardFlipEffect(){
     const card = document.querySelector('.card');
     let flipped = false;
-    const flipTimeline = gsap.timeline({ paused: true, defaults: { ease: "linear" } });
+    const flipTimeline = gsap.timeline({ paused: true, defaults: { ease: "power2.inOut" } });
     const link = card.querySelectorAll('a');
 
     flipTimeline
-    .to(card, { rotateX: 90, rotateY: 135, rotateZ: 45, duration: 0.8 })  
-    .to(card, { rotateX: 0, rotateY: 180, rotateZ: 0, duration: 0.8 })  
+    .to(card, { rotateX: 180, rotateY: 360, rotateZ: 180, duration: 2 })  
     
     init()
     initEvent()
