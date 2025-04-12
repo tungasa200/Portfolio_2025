@@ -133,7 +133,7 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 .left, .right {  position: absolute;  background: #ddd;}
 .top, .bottom { width: 1000px; height: 4px; left: 0;}
 .top {transform: rotateX(90deg) translateZ(0px);}
-.bottom {transform: rotateX(-90deg) translateZ(598px);}
+.bottom {transform: rotateX(-90deg) translateZ(-598px);}
 .left, .right { width: 4px; height: 600px; top: 0;}
 .left {transform: rotateY(90deg) translateZ(997px);}
 .right {transform: rotateY(-90deg) translateZ(0px);}
