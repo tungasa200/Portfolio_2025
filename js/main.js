@@ -5,14 +5,64 @@ window.addEventListener("load", () => {
     if (window.location.hash  !== intro) {
         history.replaceState(null, null, window.location.pathname + window.location.search + intro);
     }
-    setTimeout(visualEffect,500)
+
+    // 폰트 로딩 확인 후 애니메이션 시작
+    checkFontsAndStartAnimations();
 });
 
 document.addEventListener("DOMContentLoaded",()=>{
+    // 폰트 로딩 완료 후 실행되도록 변경
+});
+
+let animationsStarted = false; // 중복 실행 방지 플래그
+
+function checkFontsAndStartAnimations() {
+    // Typekit 폰트 로딩 확인
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+            // Typekit의 wf-active 또는 wf-inactive 클래스 확인
+            let typekitCheckTimeout;
+            const checkTypekit = setInterval(() => {
+                if (document.documentElement.classList.contains('wf-active') ||
+                    document.documentElement.classList.contains('wf-inactive')) {
+                    clearInterval(checkTypekit);
+                    clearTimeout(typekitCheckTimeout);
+                    if (!animationsStarted) {
+                        animationsStarted = true;
+                        startAllAnimations();
+                    }
+                }
+            }, 100);
+
+            // 최대 3초 후에는 무조건 시작
+            typekitCheckTimeout = setTimeout(() => {
+                clearInterval(checkTypekit);
+                if (!animationsStarted) {
+                    animationsStarted = true;
+                    startAllAnimations();
+                }
+            }, 3000);
+        });
+    } else {
+        // document.fonts를 지원하지 않는 브라우저는 2초 후 시작
+        setTimeout(() => {
+            if (!animationsStarted) {
+                animationsStarted = true;
+                startAllAnimations();
+            }
+        }, 2000);
+    }
+}
+
+function startAllAnimations() {
+    // 기존 애니메이션들 시작
     cardFlipEffect();
-    mousePointerEffect()
-    setTimeout(fullpageEffect,4000)
-})
+    mousePointerEffect();
+    animationActiveScrollEffect();
+
+    setTimeout(visualEffect, 500);
+    setTimeout(fullpageEffect, 4000);
+}
 
 function swiperEffect(){
     fullpageSwiper()
@@ -32,7 +82,6 @@ function visualEffect() {
         setWrapWidth();
         wordActive()
         timer = setInterval(wordChange, 1000);
-        setTimeout(()=>{document.querySelector('.dark').classList.add('active')},4000)
     }
 
     function wordChange() {
@@ -47,13 +96,16 @@ function visualEffect() {
         }else{
             clearInterval(timer);
             cw[currentIndex -1].classList.add('active');
-            cw[currentIndex -1].style.transform='translate(-50%,50%)';   
+            cw[currentIndex -1].style.transform='translate(-50%,50%)';
             word = cw[currentIndex -1].children;
             for(let i = 0; i < cw[currentIndex -1].children.length ; i++ ){
                 word[i].style.color='#FF6347';
             }
             visual.classList.add('active');
-            setTimeout(()=>{document.querySelector('#content01').scrollIntoView({ behavior: 'smooth' });},700);
+            setTimeout(()=>{
+                document.querySelector('#content01').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(()=>{document.querySelector('.dark').classList.add('active')},100);
+            },700);
         }
         setWrapWidth();
     }

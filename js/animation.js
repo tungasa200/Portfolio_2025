@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded',()=>{
-  animationActiveScrollEffect()/*애니메이션이 있는 위치로 스크롤해야 애니메이션이 동작하는 함수*/
-})
+// DOMContentLoaded 이벤트 제거 - main.js의 startAllAnimations()에서 호출
+// document.addEventListener('DOMContentLoaded',()=>{
+//   animationActiveScrollEffect()
+// })
 
 function animationActiveScrollEffect(){
 	const trigger = document.querySelectorAll("[class*='ani_']")/*ani_가 포함된 모든 클래스를 선택*/
