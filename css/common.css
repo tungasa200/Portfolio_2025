@@ -195,3 +195,206 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 @keyframes sec02-openning {
   from { clip-path: circle(0vw) } to { clip-path: circle(100vw); }
 }
+
+
+@media (max-width: 1600px) {
+  .inner { padding-left: 2rem; padding-right: 2rem; }
+  .inner02 { padding-left: 2rem; padding-right: 2rem; }
+
+  #visual .visual_list p,
+  #visual .visual_list p * { font-size: 4.5rem; }
+  #visual .change-word_wrap { height: 4.5rem; }
+
+  #content01 strong,
+  #content01 h1 { font-size: 4.5vw; }
+
+  .title h1 { font-size: 4rem; }
+  .prjt-openning h1 { font-size: 8rem; }
+
+  .card { width: 800px; height: 500px; }
+  .face { width: 800px; height: 500px; }
+  .card h1 { font-size: 8rem; }
+  .card h2 { font-size: 3rem; }
+  .top, .bottom { width: 800px; }
+  .left, .right { height: 500px; }
+  .bottom { transform: rotateX(-90deg) translateZ(-498px); }
+  .left { transform: rotateY(90deg) translateZ(797px); }
+}
+
+@media (max-width: 1024px) {
+  :root { --header-height: 4rem; }
+
+  .main .pointer_wrap { display: none; }
+
+  #visual .visual_wrap { gap: 1rem; }
+  #visual .visual_list { flex-direction: column; gap: 1rem; }
+  #visual .visual_list li { width: 100%; text-align: center; }
+  #visual .visual_list p,
+  #visual .visual_list p * { font-size: 3.5rem; }
+  #visual .change-word_wrap { height: 3.5rem; }
+  #visual .visual-txt { font-size: 1rem; text-align: center; padding: 0 2rem; }
+
+  #content01 { background: linear-gradient(to right, #000 10%, #fff 10%, #fff 35%, #eee 55%); }
+  #content01 .inner { padding-left: 5%; }
+  #content01 .wrap { gap: 4rem; }
+  #content01 strong,
+  #content01 h1 { font-size: 5vw; }
+  #content01 p { font-size: 1rem; }
+
+  .title h1 { font-size: 3rem; }
+
+  #content02 .content-wrap { flex-direction: column; gap: 3rem; }
+  #content02 .pic { width: 100%; height: 300px; }
+  #content02 .info_list h2 { font-size: 2rem; }
+
+  #content03 .skill_list { flex-direction: column; gap: 2rem; }
+  #content03 .skill_list > li { width: 100%; }
+  #content03 .skill_list .item { gap: 4rem; }
+
+  .prjt-openning h1 { font-size: 6rem; }
+
+  .container { flex-direction: column; }
+  .container .txt-area { width: 100%; }
+  .container .img-area { width: 100%; height: 400px; }
+
+  .card { width: 600px; height: 400px; }
+  .face { width: 600px; height: 400px; }
+  .card h1 { font-size: 6rem; }
+  .card h2 { font-size: 2.5rem; }
+  .card p { font-size: 1.2rem; }
+  .top, .bottom { width: 600px; }
+  .left, .right { height: 400px; }
+  .bottom { transform: rotateX(-90deg) translateZ(-398px); }
+  .left { transform: rotateY(90deg) translateZ(597px); }
+
+  nav { bottom: 1rem; right: 1rem; }
+}
+
+@media (max-width: 768px) {
+  :root { --header-height: 3rem; }
+
+  body, html { overflow-x: hidden; }
+
+  #visual .visual_list p,
+  #visual .visual_list p * { font-size: 2.5rem; }
+  #visual .change-word_wrap { height: 2.5rem; }
+  #visual .visual-txt { font-size: 0.9rem; }
+
+  #content01::before,
+  #content01::after { display: none; }
+  #content01 .light { display: none; }
+  #content01 { background: linear-gradient(to bottom, #000 20%, #fff 20%); }
+  #content01 .inner { padding-left: 2rem; }
+  #content01 .wrap { gap: 3rem; }
+  #content01 strong,
+  #content01 h1 { font-size: 7vw; }
+  #content01 .title-box { gap: 1rem; }
+  #content01 .title-box div { gap: 1rem; }
+  #content01 .title-box span { width: 50px; height: 50px; }
+
+  .title h1 { font-size: 2.5rem; }
+
+  #content02 .info_list h2 { font-size: 1.5rem; }
+  #content02 .info_list p { font-size: 1rem; }
+
+  #content03 .skill_list h2 { font-size: 2rem; }
+  #content03 .skill_list p { font-size: 1rem; }
+
+  .prjt-openning h1 { font-size: 4rem; }
+
+  .container .item-box .item h3 { font-size: 1.1rem; }
+  .container .txt-area p { font-size: 1rem; }
+
+  .icon-box { gap: 0.5rem; }
+  .icon-box .item img,
+  .icon-box .item svg { width: 2.5rem; height: 2.5rem; }
+  .icon-box .item p { font-size: 14px; }
+
+  .btn-box { flex-wrap: wrap; }
+  .btn { font-size: 16px; padding: 4px 0.8rem; }
+
+  .card { width: 90vw; height: 60vh; max-width: 500px; max-height: 350px; }
+  .face { width: 90vw; height: 60vh; max-width: 500px; max-height: 350px; }
+  .card h1 { font-size: 4rem; }
+  .card h2 { font-size: 2rem; }
+  .card p { font-size: 1rem; }
+  .card .item-box { gap: 2rem; }
+  .top, .bottom { width: 90vw; max-width: 500px; }
+  .left, .right { height: 60vh; max-height: 350px; }
+  .bottom { transform: rotateX(-90deg) translateZ(calc(-60vh + 2px)); }
+  .left { transform: rotateY(90deg) translateZ(calc(90vw - 3px)); }
+
+  #footer h1 { font-size: 1.2rem; }
+  #footer p { font-size: 1rem; }
+
+  .fullpage-swiper .swiper-pagination-bullets { bottom: 1rem !important; }
+}
+
+@media (max-width: 420px) {
+  :root { --header-height: 2.5rem; }
+
+  .inner { padding-left: 1rem; padding-right: 1rem; }
+  .inner02 { padding-left: 1rem; padding-right: 1rem; }
+
+  #visual .visual_list { gap: 0.5rem; }
+  #visual .visual_list p,
+  #visual .visual_list p * { font-size: 1.8rem; }
+  #visual .change-word_wrap { height: 1.8rem; }
+  #visual .visual-txt { font-size: 0.75rem; padding: 0 1rem; }
+
+  #content01 .inner { padding-left: 1rem; }
+  #content01 .wrap { gap: 2rem; }
+  #content01 strong,
+  #content01 h1 { font-size: 9vw; }
+  #content01 p { font-size: 0.9rem; }
+  #content01 .title-box div { flex-direction: column; align-items: flex-start; }
+  #content01 .title-box .bar { width: 3rem; }
+  #content01 .title-box span { width: 40px; height: 40px; }
+
+  .title h1 { font-size: 2rem; }
+
+  #content02 .content-wrap { gap: 2rem; }
+  #content02 .pic { height: 200px; }
+  #content02 .info_list { gap: 1.5rem; }
+  #content02 .info_list h2 { font-size: 1.3rem; }
+  #content02 .info_list p { font-size: 0.9rem; }
+
+  #content03 .skill_list h2 { font-size: 1.5rem; }
+  #content03 .skill_list .item { padding: 1.5rem; gap: 3rem; }
+  #content03 .skill_list ul { gap: 1.5rem; }
+
+  .prjt-openning h1 { font-size: 3rem; }
+
+  .container .img-area { height: 300px; }
+  .container .item-box { gap: 1.5rem; margin-bottom: 2rem; }
+  .container .txt-area h3 { font-size: 1rem; }
+  .container .txt-area p { font-size: 0.9rem; }
+
+  .icon-box .item img,
+  .icon-box .item svg { width: 2rem; height: 2rem; }
+  .icon-box .item p { font-size: 12px; }
+
+  .btn { font-size: 14px; padding: 3px 0.6rem; }
+
+  .card { width: 95vw; height: 55vh; max-width: 400px; max-height: 280px; }
+  .face { width: 95vw; height: 55vh; max-width: 400px; max-height: 280px; }
+  .card h1 { font-size: 3rem; }
+  .card h2 { font-size: 1.5rem; }
+  .card p { font-size: 0.85rem; }
+  .card .item-box { flex-direction: column; gap: 1rem; }
+  .top, .bottom { width: 95vw; max-width: 400px; }
+  .left, .right { height: 55vh; max-height: 280px; }
+  .bottom { transform: rotateX(-90deg) translateZ(calc(-55vh + 2px)); }
+  .left { transform: rotateY(90deg) translateZ(calc(95vw - 3px)); }
+
+  #footer { padding: 2rem 0; }
+  #footer .inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  #footer h1 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  #footer p { font-size: 0.9rem; }
+
+  .main .pointer { width: 1.5rem; height: 1.5rem; }
+  .main .pointer.active { width: 3rem; height: 3rem; }
+  .main .pointer .img * { width: 2rem; height: 2rem; }
+
+  nav { display: none; }
+}
