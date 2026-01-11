@@ -274,6 +274,20 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
   nav { bottom: 1rem; right: 1rem; }
 }
 
+@media (max-width: 1024px) {
+  .accordion {
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title-box02 h1 { font-size: 3.5rem; }
+  .title-box02 span { font-size: 2rem; }
+}
+
 @media (max-width: 768px) {
   :root { --header-height: 3rem; }
 
@@ -298,6 +312,14 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 
   .title h1 { font-size: 2.5rem; }
 
+  .title-box02 h1 { font-size: 2.5rem; }
+  .title-box02 span { font-size: 1.8rem; padding-left: 15px; }
+
+  .container { flex-direction: column; gap: 2rem; }
+  .container .txt-area,
+  .container .img-area { width: 100%; }
+  .container .img-area { height: 400px; }
+
   #content02 .info_list h2 { font-size: 1.5rem; }
   #content02 .info_list p { font-size: 1rem; }
 
@@ -305,6 +327,9 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
   #content03 .skill_list p { font-size: 1rem; }
 
   .prjt-openning h1 { font-size: 4rem; }
+
+  #sec02.section { height: 100vh; }
+  #sec02 .prjt-openning { height: 100%; }
 
   .container .item-box .item h3 { font-size: 1.1rem; }
   .container .txt-area p { font-size: 1rem; }
@@ -357,6 +382,15 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 
   .title h1 { font-size: 2rem; }
 
+  .title-box02 { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .title-box02 h1 { font-size: 2rem; }
+  .title-box02 span { font-size: 1.3rem; padding-left: 0; }
+
+  .container { flex-direction: column; gap: 1.5rem; }
+  .container .txt-area,
+  .container .img-area { width: 100%; }
+  .container .img-area { height: 300px; }
+
   #content02 .content-wrap { gap: 2rem; }
   #content02 .pic { height: 200px; }
   #content02 .info_list { gap: 1.5rem; }
@@ -368,6 +402,9 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
   #content03 .skill_list ul { gap: 1.5rem; }
 
   .prjt-openning h1 { font-size: 3rem; }
+
+  #sec02.section { height: 100vh; }
+  #sec02 .prjt-openning { height: 100%; }
 
   .container .img-area { height: 300px; }
   .container .item-box { gap: 1.5rem; margin-bottom: 2rem; }
@@ -539,4 +576,124 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #666;
+}
+
+/* Accordion Responsive Styles */
+@media (max-width: 768px) {
+  .accordion {
+    padding: 1.5rem 0;
+    gap: 0.8rem;
+  }
+
+  .accordion-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .accordion-header > div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+  }
+
+  .project-link {
+    font-size: 1.2rem;
+  }
+
+  .accordion-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .accordion-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .project-detail {
+    padding: 1.5rem;
+  }
+
+  .project-detail h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-detail p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .accordion {
+    padding: 1rem 0;
+    gap: 0.6rem;
+  }
+
+  .accordion-item {
+    border-radius: 6px;
+  }
+
+  .accordion-header {
+    padding: 0.8rem 1rem;
+    flex-direction: row;
+  }
+
+  .accordion-header > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-link {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    color: white;
+    opacity: 0.9;
+  }
+
+  .accordion-header > div p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .accordion-toggle {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .accordion-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .accordion-content {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 800px;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease 0.1s;
+  }
+
+  .project-detail {
+    padding: 1rem;
+  }
+
+  .project-detail h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
