@@ -59,6 +59,7 @@ function startAllAnimations() {
     cardFlipEffect();
     mousePointerEffect();
     animationActiveScrollEffect();
+    accordionEffect();
 
     setTimeout(visualEffect, 500);
     setTimeout(fullpageEffect, 4000);
@@ -463,3 +464,51 @@ function mousePointerEffect(){
 //         $(this).find('strong').text(Math.round(stepValue * 100) + '%');
 //     });
 // }
+
+function accordionEffect() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach((item) => {
+        const header = item.querySelector('.accordion-header');
+        const toggle = item.querySelector('.accordion-toggle');
+
+
+        // 헤더 클릭 시 아코디언 토글
+        header.addEventListener('click', (e) => {
+                        
+                const isActive = item.classList.contains('active');
+         
+                // 현재 아코디언 토글
+                if (isActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            
+        });
+
+        // 토글 버튼 클릭 시 아코디언 토글
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = item.classList.contains('active');
+
+            // 다른 모든 아코디언 닫기
+            accordionItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // 현재 아코디언 토글
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+function animationActiveScrollEffect() {
+    // 기존 애니메이션 코드
+}
