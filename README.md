@@ -2,7 +2,7 @@
 
 > 풀스택 웹 개발자 포트폴리오
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue)](woooo.dothome.co.kr/portfolio_2025/index.html)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue)](http://kswoooo.dothome.co.kr/portfolio_2025/index.html)
 [![GitHub](https://img.shields.io/badge/GitHub-tungasa200-black)](https://github.com/tungasa200/Portfolio_2025)
 
 ---
