@@ -13,7 +13,7 @@ nav { display: block; position: fixed; bottom: 2rem; right: 3rem; z-index: 800;}
 
 #visual { display: block; position: relative;  overflow: hidden; transition: .3s; z-index: 900; background-color: #eee;}
 #visual.active { background-color: #000; }
-#visual .visual_wrap {display: flex; flex-direction: column; gap: 2rem; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;}
+#visual .visual_wrap {display: flex; flex-direction: column; gap: 3rem; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;}
 #visual .visual_list { display: flex; gap: 2rem; align-items: center; justify-content: center; }
 #visual .visual_list p ,
 #visual .visual_list p * { font-size:5.5rem ; font-weight: 500; line-height: 1; transition: .3s;}
